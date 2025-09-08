@@ -1,0 +1,9 @@
+Main Creator:
+HoshiWinter
+
+AI help:
+ChatGPT; helped remind me of certain syntax, didn't make any of the code directly
+GitHub Copilot; same as chatgpt and helped troubleshoot
+
+APIs:
+Flask
