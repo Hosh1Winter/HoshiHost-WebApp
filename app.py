@@ -11,7 +11,7 @@ app.secret_key = "some_long_random_string"
 
 @app.route("/")
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -56,4 +56,5 @@ def start_server():
     return jsonify({"message": "Server Starting!"})
 
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=55557)
