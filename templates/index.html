@@ -5,16 +5,17 @@
         <title>
             HoshiHost
         </title>
+        <link rel="stylesheet" href="CSS/style.css">
         <script src="{{ url_for('static', filename='javascript/server_management.js') }}" defer></script> 
     </head>
     <body>
-        <!-- test commit -->
-        {% if current_user.is_authenticated %}
-            <p>Welcome, {{current_user.username}}!</p>
-            <button onclick="start_server()">Start My Server</button>
-        {% else %}
-            <p> Please login</p>
-            <a href="/login"> Login</a>
-        {% endif %}
+        <nav>
+            <a href="index.html"><img src="../static/images/HoshiHost_Logo.png" alt="HoshiHost logo"></a>
+
+            <div class="Navlinks">
+                <a href="login.html">Login</a>
+                <a href="login.html">Sign-up</a>
+            </div>
+        </nav>
     </body>
 </html>
