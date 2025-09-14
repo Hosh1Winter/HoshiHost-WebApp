@@ -1,4 +1,7 @@
 # HoshiHost-WebApp
+
+Before running app.py and starting the app run setup.py to install all required libraries
+
 My webb app for Hoshi Host
 
   Credits:

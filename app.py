@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, jsonify
 from flask_login import LoginManager, login_user, logout_user, current_user
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import check_password_hash
 from backend import mcserver, userdata
 
 app = Flask(__name__)
@@ -56,6 +56,5 @@ def start_server():
     return jsonify({"message": "Server Starting!"})
 
 if __name__ == "__main__":
-
     app.run(host="0.0.0.0", port=55557)
 
