@@ -3,6 +3,8 @@ from flask_login import LoginManager, login_user, logout_user, current_user
 from werkzeug.security import check_password_hash
 from backend import mcserver, userdata
 
+#Comit Test
+
 app = Flask(__name__)
 login_manager = LoginManager()
 login_manager.init_app(app)
