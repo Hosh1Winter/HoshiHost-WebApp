@@ -18,7 +18,7 @@ class Server():
         self.version = _version
         self.process = None
 
-    def build_start_command(self):
+    def build_start_command(self, jdk_dir):
         if platform.system() == "Windows":
              server_platform = "Windows"
         elif platform.system() == "Linux":
@@ -28,12 +28,14 @@ class Server():
                  server_platform = "Linux"
         print(server_platform)
         
-        return commands[server_platform + '_Start'][self.version]
+        command = commands[server_platform + '_Start'][self.version]
+        
 
 
-    def start(self):
+
+    def start(self, jdk_dir):
         #starts the server and stores process as self.process
-        self.process = subprocess.Popen(self.build_start_command(), cwd=self.path)
+        self.process = subprocess.Popen(self.build_start_command(jdk_dir), cwd=self.path)
 
     def force_stop(self):
         #force stops the server incase you can't run 'stop' in the minecraft console
