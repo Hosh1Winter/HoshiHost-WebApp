@@ -3,7 +3,7 @@ import subprocess, sys
 def main():
     try:
         subprocess.run([sys.executable,"-m", "pip", "install", "-r", "requirements.txt"])
-        print("\nAll requirements installed sucessfully")
+        print("\nDone")
         input("Press enter to exit: ")
     except Exception as e:
         print(f"\nFailed:{e}")
