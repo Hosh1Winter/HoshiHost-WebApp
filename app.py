@@ -56,5 +56,9 @@ def start_server():
     return jsonify({"message": "Server Starting!"})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=55557)
-
+    try:
+        app.run(host="0.0.0.0", port=55557)
+    except Exception as e:
+        print("Failed to run, did you install dependencies?")
+        print(f"Error:\n{e}")
+        input("Press enter to exit: ")
