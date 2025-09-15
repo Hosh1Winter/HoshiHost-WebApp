@@ -1,3 +1,4 @@
+import json
 from flask import Flask, request, render_template, jsonify
 from flask_login import LoginManager, login_user, logout_user, current_user
 from werkzeug.security import check_password_hash
@@ -7,6 +8,8 @@ app = Flask(__name__)
 login_manager = LoginManager()
 login_manager.init_app(app)
 servers = {}
+with open('config.json', 'r') as conf:
+    config = json.load(conf)
 app.secret_key = "some_long_random_string"
 
 @app.route("/")
@@ -34,7 +37,7 @@ def login_try():
     else:
         return jsonify({"message": "Invalid Login"})
     
-@app.route('/logout')
+@app.route('/logout_try')
 def logout():
     logout_user()
     return jsonify({'message': 'logged out'})
@@ -57,7 +60,7 @@ def start_server():
 
 if __name__ == "__main__":
     try:
-        app.run(host="0.0.0.0", port=55557)
+        app.run(host="0.0.0.0", port=config['web_port'])
     except Exception as e:
         print("Failed to run, did you install dependencies?")
         print(f"Error:\n{e}")
