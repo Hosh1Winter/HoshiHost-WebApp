@@ -29,7 +29,7 @@ def main():
                 break
             except Exception as e:
                 print("Not an integer, try again")
-        conf_dictionary = {"jdk8_path":jdk8_path,"jdk17_path":jdk17_path,"jdk21_path":jdk21_path,"web_port":web_port}
+        conf_dictionary = {"jdk8_path":jdk8_path,"jdk17_path":jdk17_path,"jdk21_path":jdk21_path,"web_port":web_port,"mcserver_pmin":mcserver_pmin,"mcserver_pmax":mcserver_pmax}
         with open('config.json', 'w') as conf:
             json.dump(conf_dictionary, conf, indent=4)
 
