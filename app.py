@@ -54,7 +54,7 @@ def load_user(user_id):
 def start_server():
     servers[current_user.id] = mcserver.Server(f"{current_user.id}'s Server", current_user.id, '1.20.5')
     print("Server Object Initialized")
-    servers[current_user.id].start({"jdk8_dir":config['jdk8_dir'],"jdk17_dir":config['jdk17_dir'],"jdk21_dir":config['jdk21_dir']})
+    servers[current_user.id].start(config)
     print('Server Starting')
     return jsonify({"message": "Server Starting!"})
 

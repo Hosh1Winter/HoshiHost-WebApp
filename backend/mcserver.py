@@ -12,13 +12,13 @@ def find_server_path(usr_email): #Finds the path for the server based on email
     return path
 
 class Server():
-    def __init__(self, _name, _usr_email, _version):
+    def __init__(self, _name, _usr_email, jdk_version):
         self.name = _name
         self.path = find_server_path(_usr_email)
-        self.version = _version
+        self.version = jdk_version
         self.process = None
 
-    def build_start_command(self, jdk_dir):
+    def build_start_command(self, config):
         if platform.system() == "Windows":
              server_platform = "Windows"
         elif platform.system() == "Linux":
@@ -29,13 +29,22 @@ class Server():
         print(server_platform)
         
         command = commands[server_platform + '_Start'][self.version]
+        if config[f"{self.version}_path"] == "":
+             pass
+        else:
+            command[0] = config[f"{self.version}_path"]
+        print(f"running with {self.version}, at {command[0]}, if that is wrong check server version and config")
+        return command
         
 
 
 
-    def start(self, jdk_dir):
+    def start(self, config):
         #starts the server and stores process as self.process
-        self.process = subprocess.Popen(self.build_start_command(jdk_dir), cwd=self.path)
+        try:
+            self.process = subprocess.Popen(self.build_start_command(config), cwd=self.path)
+        except Exception as e:
+             print(f"Error{e}")
 
     def force_stop(self):
         #force stops the server incase you can't run 'stop' in the minecraft console

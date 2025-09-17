@@ -1,0 +1,6 @@
+{
+    "jdk8_path": "path8",
+    "jdk17_path": "path17",
+    "jdk21_path": "path21",
+    "web_port": 55555
+}
