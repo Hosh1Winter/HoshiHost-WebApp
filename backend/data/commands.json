@@ -1,5 +1,21 @@
 {
     "Windows_Start": {
+        "jdk8": [
+            "C:\\Program Files\\Java\\jdk-8\\bin\\java.exe",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
+        "jdk17": [
+            "C:\\Program Files\\Java\\jdk-17\\bin\\java.exe",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
         "jdk21": [
             "C:\\Program Files\\Java\\jdk-21\\bin\\java.exe",
             "-Xms1G",
