@@ -1,6 +1,6 @@
 # HoshiHost-WebApp
 
-Before running app.py and starting the app run setup.py to install all required libraries, if the script does not work, figure out how to pip install flask and flask login onto your device
+Before running the app go run setup.py and go through that process, if it still does not work check, if flask and flask-login libraries are installed, and go look through config.json to make sure it's correct
 
 My webb app for Hoshi Host
 
