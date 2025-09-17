@@ -24,5 +24,57 @@
             "server.jar",
             "--nogui"
         ]
+    },
+    "Linux_Start": {
+        "jdk8": [
+            "/lib/jvm/java-8-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
+        "jdk17": [
+            "/lib/jvm/java-17-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
+        "jdk21": [
+            "/lib/jvm/java-21-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ]
+    },
+    "Linux_Arm_Start": {
+        "jdk8": [
+            "/lib/jvm/java-8-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
+        "jdk17": [
+            "/lib/jvm/java-17-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ],
+        "jdk21": [
+            "/lib/jvm/java-21-openjdk-amd64/bin/java",
+            "-Xms1G",
+            "-Xmx2G",
+            "-jar",
+            "server.jar",
+            "--nogui"
+        ]
     }
 }

@@ -37,7 +37,7 @@ def login_try():
     else:
         return jsonify({"message": "Invalid Login"})
     
-@app.route('/logout_try')
+@app.route('/logout_try', methods=['POST'])
 def logout():
     logout_user()
     return jsonify({'message': 'logged out'})
@@ -52,7 +52,7 @@ def load_user(user_id):
 
 @app.route('/start_server', methods=['POST'])
 def start_server():
-    servers[current_user.id] = mcserver.Server(f"{current_user.id}'s Server", current_user.id, '1.20.5')
+    servers[current_user.id] = mcserver.Server(f"{current_user.id}'s Server", current_user.id, 'jdk21')
     print("Server Object Initialized")
     servers[current_user.id].start(config)
     print('Server Starting')

@@ -1,6 +1,6 @@
 {
     "jdk8_path": "path8",
     "jdk17_path": "path17",
-    "jdk21_path": "path21",
+    "jdk21_path": "/lib/jvm/java-21-openjdk-amd64/bin/java",
     "web_port": 55555
 }
