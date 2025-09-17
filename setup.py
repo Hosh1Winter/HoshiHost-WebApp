@@ -4,7 +4,7 @@ def main():
     try:
         subprocess.run([sys.executable,"-m", "pip", "install", "-r", "requirements.txt"])
 
-        print("Dependencies installed, please input java instilation paths, or leave empty if none")
+        print("Dependencies installation done, please input java instilation paths, or leave empty if none")
         loop = True
         jdk8_path = input("Input jdk8: ")
         jdk17_path = input("Input jdk17: ")
