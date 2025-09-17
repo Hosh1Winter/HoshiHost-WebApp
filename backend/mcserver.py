@@ -33,7 +33,7 @@ class Server():
              pass
         else:
             command[0] = config[f"{self.version}_path"]
-        print(f"running with {self.version}, at {command[0]}, if that is wrong check server version and config")
+        print(f"running with {self.version}, at {command[0]}")
         return command
         
 
