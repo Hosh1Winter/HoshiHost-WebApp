@@ -1,0 +1,40 @@
+nav {
+  background-color: #0E0E1B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+}
+nav a img {
+  width: 25em;
+  height: auto;
+}
+nav .Navlinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+nav .Navlinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 954px) {
+  nav {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  nav .Navlinks {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+}/*# sourceMappingURL=style.css.map */

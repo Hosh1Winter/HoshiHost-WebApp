@@ -1,0 +1,8 @@
+<!-- test commit
+        {% if current_user.is_authenticated %}
+            <p>Welcome, {{current_user.username}}!</p>
+            <button onclick="start_server()">Start My Server</button>
+        {% else %}
+            <p> Please login</p>
+            <a href="/login"> Login</a>
+        {% endif %} -->

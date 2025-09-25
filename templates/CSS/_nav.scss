@@ -1,0 +1,39 @@
+// This page contains the CSS for the navigation bar.
+@use 'variables' as v;
+
+nav {
+    background-color: v.$primary-color;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 35px;
+    a {
+        img {
+            width: 25em;
+            height: auto;
+        }
+    }
+    .Navlinks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 12px;
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+    }
+}
+@media screen and (max-width: 954px) {
+    nav {
+        flex-direction: column;
+        row-gap: 15px;
+        .Navlinks {
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+    
+}
