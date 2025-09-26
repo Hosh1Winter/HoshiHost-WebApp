@@ -2,20 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>
-            HoshiHost
-        </title>
-        <link rel="stylesheet" href="CSS/style.css">
+        <title>HoshiHost</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="{{ url_for('static', filename='javascript/server_management.js') }}" defer></script> 
     </head>
     <body>
-        <!-- Naviagtion Bar -->
+        <!-- Navigation Bar -->
         <nav>
-            <a href="index.html"><img src="../static/images/HoshiHost_Logo.png" alt="HoshiHost logo"></a>
-
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='images/HoshiHost_Logo.png') }}" alt="HoshiHost logo">
+            </a>
             <div class="Navlinks">
-                <a href="login.html">Login</a>
-                <a href="login.html">Sign-up</a>
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('login') }}">Sign-up</a>
             </div>
         </nav>
     </body>
